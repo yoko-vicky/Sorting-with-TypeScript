@@ -23,6 +23,6 @@ var NumbersCollection = /** @class */ (function () {
     return NumbersCollection;
 }());
 exports.NumbersCollection = NumbersCollection;
-var collection = new NumbersCollection([1, 2, 3]);
-console.log(collection.length);
+// const collection = new NumbersCollection([1,2,3])
+// console.log(collection.length)
 // collection.compare

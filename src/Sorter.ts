@@ -1,8 +1,12 @@
-import { NumbersCollection } from "./NumbersCollection";
+export interface Sortable {
+  length: number
+  compare (currentIndex: number): boolean
+  swap (indexOne: number, indexTwo: number): void
+}
 
 export class Sorter {
   constructor(
-    public collection: NumbersCollection
+    public collection: Sortable
   ) { }
 
   sort():void {
