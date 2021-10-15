@@ -1,9 +1,3 @@
-export interface Sortable {
-  length: number
-  compare (currentIndex: number): boolean
-  swap (indexOne: number, indexTwo: number): void
-}
-
 export abstract class Sorter {
   abstract length: number
   abstract compare (currentIndex: number): boolean
