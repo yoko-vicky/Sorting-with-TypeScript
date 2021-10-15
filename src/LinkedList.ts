@@ -1,4 +1,4 @@
-import { Sortable } from "./Sorter";
+import { Sorter } from "./Sorter";
 
 export class ListNode {
   constructor(
@@ -7,10 +7,12 @@ export class ListNode {
   ) {}
 }
 
-export class LinkedList implements Sortable{
+export class LinkedList extends Sorter{
   constructor(
     public head: ListNode | null = null
-  ) { }
+  ) {
+    super()
+   }
 
   add (value: number) {
     const newNode = new ListNode(value)
@@ -75,9 +77,11 @@ export class LinkedList implements Sortable{
     }
 
     let pointer: ListNode | null = this.head
+    let values: number[] = []
     while (pointer && pointer.next) {
-      console.log(pointer.value)
+      values.push(pointer.value)
       pointer = pointer.next
     }
+    console.log(values)
   }
 }
