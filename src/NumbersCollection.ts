@@ -10,7 +10,7 @@ export class NumbersCollection implements Sortable{
   }
 
   compare(currentIndex:number): boolean{
-    return this.data[currentIndex+1] < this.data[currentIndex]
+    return this.data[currentIndex] < this.data[currentIndex-1]
   }
 
   swap(indexOne:number, indexTwo:number): void{

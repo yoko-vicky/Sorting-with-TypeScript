@@ -13,7 +13,7 @@ var NumbersCollection = /** @class */ (function () {
         configurable: true
     });
     NumbersCollection.prototype.compare = function (currentIndex) {
-        return this.data[currentIndex] < this.data[currentIndex - 1];
+        return this.data[currentIndex + 1] < this.data[currentIndex];
     };
     NumbersCollection.prototype.swap = function (indexOne, indexTwo) {
         var tempo = this.data[indexOne];

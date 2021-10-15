@@ -12,9 +12,9 @@ export class Sorter {
   sort():void {
     let swapped = false
     for (let i = this.collection.length - 1; i >= 0; i--){
-      for (let j = 0; j < this.collection.length; j++){
+      for (let j = 1; j < this.collection.length; j++){
         if (this.collection.compare(j)) {
-          this.collection.swap(j, j+1)
+          this.collection.swap(j, j-1)
           swapped = true
         }
       }

@@ -8,9 +8,9 @@ var Sorter = /** @class */ (function () {
     Sorter.prototype.sort = function () {
         var swapped = false;
         for (var i = this.collection.length - 1; i >= 0; i--) {
-            for (var j = 0; j < this.collection.length; j++) {
+            for (var j = 1; j < this.collection.length; j++) {
                 if (this.collection.compare(j)) {
-                    this.collection.swap(j, j + 1);
+                    this.collection.swap(j, j - 1);
                     swapped = true;
                 }
             }
