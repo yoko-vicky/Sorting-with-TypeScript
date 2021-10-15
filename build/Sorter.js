@@ -2,15 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sorter = void 0;
 var Sorter = /** @class */ (function () {
-    function Sorter(collection) {
-        this.collection = collection;
+    function Sorter() {
     }
     Sorter.prototype.sort = function () {
         var swapped = false;
-        for (var i = this.collection.length - 1; i >= 0; i--) {
-            for (var j = 1; j < this.collection.length; j++) {
-                if (this.collection.compare(j)) {
-                    this.collection.swap(j, j - 1);
+        var length = this.length;
+        for (var i = length - 1; i >= 0; i--) {
+            for (var j = 1; j < length; j++) {
+                if (this.compare(j)) {
+                    this.swap(j, j - 1);
                     swapped = true;
                 }
             }
